@@ -1,0 +1,20 @@
+#SigBut{
+
+    width: 289px;
+    height: 70px;
+    background-color: #00873E;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: x-large;
+    border-radius: 10px;
+    border-color: #00873E;
+    box-shadow: none;
+}
+
+#sigTitle{
+    font-family: cursive;
+    font-size: x-large;
+    color: #B11515;
+    font-weight: bolder;
+}
