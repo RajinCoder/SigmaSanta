@@ -1,24 +1,32 @@
-import "./App.css";
-import { useState, useEffect } from "react";
+// frontend/src/App.tsx
+
+import React, { useState } from 'react';
+import axios, { AxiosResponse } from 'axios';
+
+interface GroupMembers {
+  group_name: string;
+  members: string[];
+}
 
 function App() {
-  const [data, setData] = useState<{ members?: string[] }>({}); // Explicitly define the type here
+  const [groupMembers, setGroupMembers] = useState<string[]>([]);
+  const groupName = "Elves"; // Change this to the desired group name
 
-  useEffect(() => {
-    fetch("http://127.0.0.1:5000/members")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        console.log(data);
+  const getGroupMembers = () => {
+    axios.get<GroupMembers>(`http://127.0.0.1:5000/members/${groupName}`)
+      .then((response: AxiosResponse<GroupMembers>) => {
+        console.log('Response:', response);
+        setGroupMembers(response.data.members);
+      })
+      .catch(error => {
+        console.error('Error getting group members:', error.response?.data?.error || 'Unknown error');
       });
-  });
+  };
+
   return (
     <div>
-      {typeof data.members === "undefined" ? (
-        <p>Loading</p>
-      ) : (
-        data.members.map((member, i) => <p key={i}>{member}</p>)
-      )}
+      <h1>Secret Santa Group Members</h1>
+      
     </div>
   );
 }
