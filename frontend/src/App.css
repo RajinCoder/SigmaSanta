@@ -14,7 +14,32 @@
 
 #sigTitle{
     font-family: cursive;
-    font-size: x-large;
+    font-size: 100px;
     color: #B11515;
     font-weight: bolder;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+  }
+  /*
+  body::after {
+    content: "";
+    background-image: url('/public/snowBottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1; 
+    z-index: -1; 
+  }
+  */
+  

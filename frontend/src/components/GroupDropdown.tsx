@@ -13,13 +13,14 @@ const GroupDropdown = ({ groupNames }: Props) => {
     <div>
       <button
         onClick={toggleDropdown}
-        className="btn dropdown-toggle"
+        className="btn btn-lg dropdown-toggle "
+        data-bs-toggle="dropdown"
         style={{
           borderRadius: 3,
           borderColor: "#00873E",
           marginBottom: "10px",
           color: "#B11515",
-          width: "60%",
+          width: "82%",
           borderWidth: 1,
         }}
       >
@@ -35,9 +36,9 @@ const GroupDropdown = ({ groupNames }: Props) => {
                 borderColor: "#00873E",
                 marginBottom: "10px",
                 color: "#B11515",
-                width: "40%",
+                width: "60%",
               }}
-              className="btn"
+              className="btn btn-lg"
             >
               {val}
             </button>
