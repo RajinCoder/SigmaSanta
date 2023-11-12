@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import Button from "./components/Button";
+import Title from "./components/Title";
 
 function App() {
   const [data, setData] = useState<{ members?: string[] }>({}); // Explicitly define the type here
@@ -15,11 +15,7 @@ function App() {
   });
   return (
     <div>
-      {typeof data.members === "undefined" ? (
-        <p>Loading</p>
-      ) : (
-        data.members.map((member, i) => <p key={i}>{member}</p>)
-      )}
+      <Title name="Sigma Santa"/>
     </div>
   );
 }

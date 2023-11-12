@@ -11,3 +11,10 @@
     border-color: #00873E;
     box-shadow: none;
 }
+
+#sigTitle{
+    font-family: cursive;
+    font-size: x-large;
+    color: #B11515;
+    font-weight: bolder;
+}
