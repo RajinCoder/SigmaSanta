@@ -1,9 +1,25 @@
-# backend.py
-
 from flask import Flask, jsonify
 from flask_cors import CORS 
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 app = Flask(__name__)
+
+uri = "mongodb+srv://jackmitchellcol:JN5Os|sqmzqvCdh2@cluster0.zbsmnmp.mongodb.net/?retryWrites=true&w=majority"
+
+client = MongoClient(uri, server_api=ServerApi('1'))
+db = client['mydatabase']
+collection = db['users']
+
+CORS(app)
+
+@app.route('/')
+
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
 
 secret_santa_groups = {}
 secret_santa_groups["Elves"] = ["hello"]
