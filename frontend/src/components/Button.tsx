@@ -1,7 +1,16 @@
 import React from "react";
 
-const Button = () => {
-  return <div>Button</div>;
+interface Props {
+  name: string 
+}
+
+const Button = ({name}: Props) => {
+  return (
+    <button id="SigBut">
+      {name} 
+      </button>
+  )
+
 };
 
 export default Button;
