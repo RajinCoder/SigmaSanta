@@ -1,10 +1,6 @@
-
-// frontend/src/App.tsx
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import "./App.css";
-import { useState, useEffect } from "react";
 import Title from "./components/Title";
 
 
@@ -12,8 +8,6 @@ interface GroupMembers {
   group_name: string;
   members: string[];
 }
-
-
 
 function App() {
   const [groupMembers, setGroupMembers] = useState<string[]>([]);
@@ -28,6 +22,7 @@ function App() {
       .catch(error => {
         console.error('Error getting group members:', error.response?.data?.error || 'Unknown error');
       });
+      return groupMembers
   };
 
   return (
