@@ -1,12 +1,8 @@
-import React from 'react'
-
-interface Props{
-    name: string
+interface Props {
+  name: string;
 }
-const Title = ({name}: Props) => {
-  return (
-    <div id= "sigTitle">{name}</div>
-  )
-}
+const Title = ({ name }: Props) => {
+  return <div id="sigTitle">{name}</div>;
+};
 
-export default Title
+export default Title;
