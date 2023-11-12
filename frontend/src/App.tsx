@@ -1,12 +1,8 @@
-
-// frontend/src/App.tsx
-
 import React, { useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import "./App.css";
-import { useState, useEffect } from "react";
 import Title from "./components/Title";
-
+import LoadingPage from './LoadingPage'
 
 interface GroupMembers {
   group_name: string;
@@ -33,6 +29,7 @@ function App() {
   return (
     <div>
       <Title name="Sigma Santa"/>
+      <LoadingPage></LoadingPage>
     </div>
   );
 }
