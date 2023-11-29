@@ -20,26 +20,33 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-  }
-  /*
-  body::after {
-    content: "";
-    background-image: url('/public/snowBottom.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1; 
-    z-index: -1; 
-  }
-  */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Set the minimum height of the body to 100vh */
+  position: relative;
+  width: 100%;
+}
+
+body::after {
+  content: "";
+  background-image: url('/snowSigma.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 70vh; /* Adjust this value to set the height of the background at the bottom */
+  opacity: 1;
+  z-index: -1;
+}
+
+
+#pressBtn:hover {
+  background-color: #00873E; /* Change the color to your desired hover effect */
+  color: white !important; /* Change the text color if needed */
+}
+  
   

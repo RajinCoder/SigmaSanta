@@ -1,16 +1,23 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
-  name: string 
+  name: string;
+  pageName?: string;
 }
 
-const Button = ({name}: Props) => {
-  return (
-    <button id="SigBut">
-      {name} 
-      </button>
-  )
+const Button = ({ name, pageName }: Props) => {
+  const navigate = useNavigate();
 
+  const handleClick = () => {
+    // Navigate to the next page
+    navigate(`/${pageName}`);
+  };
+
+  return (
+    <button onClick={handleClick} id="SigBut">
+      {name}
+    </button>
+  );
 };
 
 export default Button;

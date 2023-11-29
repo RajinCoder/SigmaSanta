@@ -10,7 +10,7 @@ const GroupDropdown = ({ groupNames }: Props) => {
     setDropdownOpen(!isDropdownOpen);
   };
   return (
-    <div>
+    <div style={{ width: "80%" }}>
       <button
         onClick={toggleDropdown}
         className="btn btn-lg dropdown-toggle "
@@ -20,7 +20,7 @@ const GroupDropdown = ({ groupNames }: Props) => {
           borderColor: "#00873E",
           marginBottom: "10px",
           color: "#B11515",
-          width: "82%",
+          width: "100%",
           borderWidth: 1,
         }}
       >
@@ -36,9 +36,11 @@ const GroupDropdown = ({ groupNames }: Props) => {
                 borderColor: "#00873E",
                 marginBottom: "10px",
                 color: "#B11515",
-                width: "60%",
+                width: "90%",
+                transitionDuration: "0.3s",
               }}
               className="btn btn-lg"
+              id="pressBtn"
             >
               {val}
             </button>

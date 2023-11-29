@@ -4,6 +4,7 @@ import "./App.css";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import GroupDropdown from "./components/GroupDropdown";
+import JoinDuo from "./components/JoinDuo";
 
 const MainScreen = () => {
   /*
@@ -37,10 +38,13 @@ const MainScreen = () => {
         className="d-flex justify-content-around"
       >
         <Button name="Create Group" />
-        <Button name="Join" />
+        <JoinDuo />
       </div>
-      <div style={{ marginTop: "40px" }}>
-        <GroupDropdown groupNames={["Sigma"]} />
+      <div
+        className="d-flex justify-content-center"
+        style={{ marginTop: "40px" }}
+      >
+        <GroupDropdown groupNames={["Sigma", "Alphas", "Omegas", "Betas"]} />
       </div>
     </div>
   );
