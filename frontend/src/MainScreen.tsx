@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import Button from "./components/Button";
 import GroupDropdown from "./components/GroupDropdown";
 import JoinDuo from "./components/JoinDuo";
+import React from "react";
 
 const MainScreen = () => {
   /*

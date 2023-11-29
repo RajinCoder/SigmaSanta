@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Title from "./components/Title";
+import React from "react";
 
 const LoadingPage = () => {
   useEffect(() => {
